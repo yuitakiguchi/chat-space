@@ -1,0 +1,30 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        Member : 
+        %li.main-header__left-box__member-list__member
+          〇〇
+    .main-header__right-box
+      =link_to "#" do
+        Edit
+  .messages
+    .messages__post
+      .messages__post__info
+        .messages__post__info__user-name
+          test!
+        .messages__post__info__date
+          2020/03/25(wed) 15:00:00
+      .messages__post__text
+        おはよう！
+  .form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('far', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type:"submit", class: "submit-btn", name: "commit", value: "Send"}
+        
