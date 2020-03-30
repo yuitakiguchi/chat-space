@@ -36,6 +36,12 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
+      a{
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      
       .group{
         color: #ffffff;
         text-decoration: none;
@@ -66,13 +72,17 @@
         margin-top: 35px;
         &__current-group{
           font-size: 20px;
-          margin-bottom: 15px;
           color: #333333;
-        }
-        &__member-list{
-          display: flex;
-          font-size: 12px;
-          color: #999999;
+          &__member-list{
+            display: flex;
+            margin-top: 15px;
+            margin-right: 5px;
+            font-size: 12px;
+            color: #999999;
+            &__member {
+              margin-left: 5px;
+            }
+          }
         }
         
       }
@@ -121,11 +131,10 @@
       background-color: #dddddd;
       padding: 20px 40px;
       height: 90px;
-      .new-message{
+      .new_message{
         display: flex;
         .input-box{
           position: relative;
-          width: 100%;
           &__text{
             height: 50px;
             width: 100%;
