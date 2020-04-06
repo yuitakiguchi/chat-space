@@ -68,7 +68,6 @@ $('#new_message').on('submit', function(e){
 })
 var reloadMessages = function() {
   var last_message_id = $('.messages__post:last').data("data-message-id");
-  console.log(last_message_id)
   $.ajax({
     url: "api/messages",
     type: 'get',
@@ -90,7 +89,7 @@ var reloadMessages = function() {
   });
 };
 
-  // if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-  //   setInterval(reloadMessages, 7000);
-  // }
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
